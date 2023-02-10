@@ -1,0 +1,12 @@
+C:\Users\nikir\source\repos\PropertiesGeometricShapes\PropertiesGeometricShapes\bin\Debug\net6.0\PropertiesGeometricShapes.deps.json
+C:\Users\nikir\source\repos\PropertiesGeometricShapes\PropertiesGeometricShapes\bin\Debug\net6.0\PropertiesGeometricShapes.dll
+C:\Users\nikir\source\repos\PropertiesGeometricShapes\PropertiesGeometricShapes\bin\Debug\net6.0\PropertiesGeometricShapes.pdb
+C:\Users\nikir\source\repos\PropertiesGeometricShapes\PropertiesGeometricShapes\obj\Debug\net6.0\PropertiesGeometricShapes.csproj.AssemblyReference.cache
+C:\Users\nikir\source\repos\PropertiesGeometricShapes\PropertiesGeometricShapes\obj\Debug\net6.0\PropertiesGeometricShapes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nikir\source\repos\PropertiesGeometricShapes\PropertiesGeometricShapes\obj\Debug\net6.0\PropertiesGeometricShapes.AssemblyInfoInputs.cache
+C:\Users\nikir\source\repos\PropertiesGeometricShapes\PropertiesGeometricShapes\obj\Debug\net6.0\PropertiesGeometricShapes.AssemblyInfo.cs
+C:\Users\nikir\source\repos\PropertiesGeometricShapes\PropertiesGeometricShapes\obj\Debug\net6.0\PropertiesGeometricShapes.csproj.CoreCompileInputs.cache
+C:\Users\nikir\source\repos\PropertiesGeometricShapes\PropertiesGeometricShapes\obj\Debug\net6.0\PropertiesGeometricShapes.dll
+C:\Users\nikir\source\repos\PropertiesGeometricShapes\PropertiesGeometricShapes\obj\Debug\net6.0\refint\PropertiesGeometricShapes.dll
+C:\Users\nikir\source\repos\PropertiesGeometricShapes\PropertiesGeometricShapes\obj\Debug\net6.0\PropertiesGeometricShapes.pdb
+C:\Users\nikir\source\repos\PropertiesGeometricShapes\PropertiesGeometricShapes\obj\Debug\net6.0\ref\PropertiesGeometricShapes.dll

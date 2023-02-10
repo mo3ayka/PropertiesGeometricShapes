@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "PropGeometricShapesUI/1.0.0": {
+        "dependencies": {
+          "PropertiesGeometricShapes": "1.0.0"
+        },
+        "runtime": {
+          "PropGeometricShapesUI.dll": {}
+        }
+      },
+      "PropertiesGeometricShapes/1.0.0": {
+        "runtime": {
+          "PropertiesGeometricShapes.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PropGeometricShapesUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PropertiesGeometricShapes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

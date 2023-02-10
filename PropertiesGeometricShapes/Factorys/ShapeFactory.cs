@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PropertiesGeometricShapes.Factorys
 {
-    public abstract class ShapeFactory
+    public abstract class ShapeFactory : IShapeFactory
     {
         protected abstract IShape MakeShape(IShapeParam param);
 

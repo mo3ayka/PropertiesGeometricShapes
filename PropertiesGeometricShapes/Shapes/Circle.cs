@@ -1,9 +1,11 @@
-﻿using PropertiesGeometricShapes.Interfaces;
+﻿using PropertiesGeometricShapes.CustomAttributes;
+using PropertiesGeometricShapes.Interfaces;
 using PropertiesGeometricShapes.ValidationAttributes;
+using System.ComponentModel;
 
 namespace PropertiesGeometricShapes.Shapes
 {
-    [CircleValidation]
+    [CircleValidation, DisplayName("Круг"), ShapeParam(typeof(CircleParam))]
     public class Circle : ShapeBase
     {
         public Circle(CircleParam param)
@@ -40,6 +42,7 @@ namespace PropertiesGeometricShapes.Shapes
             Radius = radius;
         }
 
+        [DisplayName("Радиус")]
         public double Radius { get; private set; }
     }
 }

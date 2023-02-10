@@ -1,9 +1,11 @@
-﻿using PropertiesGeometricShapes.Interfaces;
+﻿using PropertiesGeometricShapes.CustomAttributes;
+using PropertiesGeometricShapes.Interfaces;
 using PropertiesGeometricShapes.ValidationAttributes;
+using System.ComponentModel;
 
 namespace PropertiesGeometricShapes.Shapes
 {
-    [TriangleValidation]
+    [TriangleValidation, DisplayName("Треугольник"), ShapeParam(typeof(TriangleParam))]
     public class Triangle : ShapeBase
     {
         public Triangle(TriangleParam param)
@@ -23,15 +25,27 @@ namespace PropertiesGeometricShapes.Shapes
 
         #region Properties
 
+        /// <summary>
+        /// Side A
+        /// </summary>
         [TriangleSideValidation]
         public double A => _a;
 
+        /// <summary>
+        /// Side B
+        /// </summary>
         [TriangleSideValidation]
         public double B => _b;
 
+        /// <summary>
+        /// Side C
+        /// </summary>
         [TriangleSideValidation]
         public double C => _c;
 
+        /// <summary>
+        /// Triangle has a right angle
+        /// </summary>
         public bool IsRightAngled => _isRightAngled ??= CheckRightAngled();
 
         #endregion
@@ -74,11 +88,23 @@ namespace PropertiesGeometricShapes.Shapes
             B = b;
             C = c;
         }
-        
+
+        /// <summary>
+        /// Side A
+        /// </summary>
+        [DisplayName("Сторона А")]
         public double A { get; private set; }
 
+        /// <summary>
+        /// Side B
+        /// </summary>
+        [DisplayName("Сторона B")]
         public double B { get; private set; }
 
+        /// <summary>
+        /// Side C
+        /// </summary>
+        [DisplayName("Сторона C")]
         public double C { get; private set; }
     }
 }
