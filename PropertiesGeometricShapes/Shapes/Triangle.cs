@@ -8,7 +8,7 @@ namespace PropertiesGeometricShapes.Shapes
     [TriangleValidation, DisplayName("Треугольник"), ShapeParam(typeof(TriangleParam))]
     public class Triangle : ShapeBase
     {
-        public Triangle(TriangleParam param)
+        internal Triangle(TriangleParam param)
         {
             _a = param.A;
             _b = param.B;

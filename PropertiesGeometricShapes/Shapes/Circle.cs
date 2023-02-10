@@ -8,7 +8,7 @@ namespace PropertiesGeometricShapes.Shapes
     [CircleValidation, DisplayName("Круг"), ShapeParam(typeof(CircleParam))]
     public class Circle : ShapeBase
     {
-        public Circle(CircleParam param)
+        internal Circle(CircleParam param)
         {
             _radius = param.Radius;
         }
