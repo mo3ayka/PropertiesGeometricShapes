@@ -54,9 +54,9 @@ namespace PropertiesGeometricShapes.Shapes
 
         private bool CheckRightAngled()
         {
-            return Math.Pow(A, 2) == Math.Pow(B, 2) + Math.Pow(C, 2) ||
-                   Math.Pow(B, 2) == Math.Pow(A, 2) + Math.Pow(C, 2) ||
-                   Math.Pow(C, 2) == Math.Pow(A, 2) + Math.Pow(B, 2);
+            return Math.Round(Math.Pow(A, 2), 3) == Math.Round(Math.Pow(B, 2), 3) + Math.Round(Math.Pow(C, 2), 3) ||
+                   Math.Round(Math.Pow(B, 2), 3) == Math.Round(Math.Pow(A, 2), 3) + Math.Round(Math.Pow(C, 2), 3) ||
+                   Math.Round(Math.Pow(C, 2), 3) == Math.Round(Math.Pow(A, 2), 3) + Math.Round(Math.Pow(B, 2), 3);
         }
 
         #endregion
