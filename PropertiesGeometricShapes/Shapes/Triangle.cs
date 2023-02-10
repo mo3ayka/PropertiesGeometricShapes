@@ -1,21 +1,16 @@
-﻿using PropertiesGeometricShapes.ValidationAttributes;
-using System.ComponentModel.DataAnnotations;
+﻿using PropertiesGeometricShapes.Interfaces;
+using PropertiesGeometricShapes.ValidationAttributes;
 
 namespace PropertiesGeometricShapes.Shapes
 {
     [TriangleValidation]
-    internal class Triangle : ShapeWithValidate
+    public class Triangle : IShape
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>a, b, c - sides</remarks>
-        public Triangle(double a, double b, double c)
-            : base()
+        public Triangle(TriangleParam param)
         {
-            _a = a;
-            _b = b;
-            _c = c;
+            _a = param.A;
+            _b = param.B;
+            _c = param.C;
         }
 
         #region Fields
@@ -39,17 +34,29 @@ namespace PropertiesGeometricShapes.Shapes
 
         #region IShape
 
-        public override double GetArea()
+        public double GetArea()
         {
             var semiPerim = (_a + _b + _c) / 2;
             return Math.Sqrt(semiPerim * (semiPerim - _a) * (semiPerim - _b) * (semiPerim - _c));
         }
 
-        public override IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        {
-            return base.Validate(validationContext);
-        }
-
         #endregion
+    }
+
+    public class TriangleParam : IShapeParam
+    {
+        /// <remarks>a, b, c - sides</remarks>
+        public TriangleParam(double a, double b, double c)
+        {
+            A = a;
+            B = b;
+            C = c;
+        }
+        
+        public double A { get; private set; }
+
+        public double B { get; private set; }
+
+        public double C { get; private set; }
     }
 }

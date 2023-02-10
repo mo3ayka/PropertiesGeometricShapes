@@ -1,6 +1,6 @@
 ﻿namespace PropertiesGeometricShapes.Interfaces
 {
-    internal interface IShape
+    public interface IShape
     {
         double GetArea();
     }
