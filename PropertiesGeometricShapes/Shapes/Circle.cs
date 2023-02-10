@@ -4,7 +4,7 @@ using PropertiesGeometricShapes.ValidationAttributes;
 namespace PropertiesGeometricShapes.Shapes
 {
     [CircleValidation]
-    public class Circle : IShape
+    public class Circle : ShapeBase
     {
         public Circle(CircleParam param)
         {
@@ -25,7 +25,7 @@ namespace PropertiesGeometricShapes.Shapes
 
         #region IShape
 
-        public double GetArea()
+        protected override double GetArea()
         {
             return Math.PI * Math.Pow(Radius, 2);
         }

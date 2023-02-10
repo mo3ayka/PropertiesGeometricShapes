@@ -4,7 +4,7 @@ using PropertiesGeometricShapes.ValidationAttributes;
 namespace PropertiesGeometricShapes.Shapes
 {
     [TriangleValidation]
-    public class Triangle : IShape
+    public class Triangle : ShapeBase
     {
         public Triangle(TriangleParam param)
         {
@@ -16,6 +16,8 @@ namespace PropertiesGeometricShapes.Shapes
         #region Fields
 
         private readonly double _a, _b, _c;
+
+        private bool? _isRightAngled;
 
         #endregion
 
@@ -30,14 +32,34 @@ namespace PropertiesGeometricShapes.Shapes
         [TriangleSideValidation]
         public double C => _c;
 
+        public bool IsRightAngled => _isRightAngled ??= CheckRightAngled();
+
+        #endregion
+
+        #region Methods
+
+        private bool CheckRightAngled()
+        {
+            return Math.Pow(A, 2) == Math.Pow(B, 2) + Math.Pow(C, 2) ||
+                   Math.Pow(B, 2) == Math.Pow(A, 2) + Math.Pow(C, 2) ||
+                   Math.Pow(C, 2) == Math.Pow(A, 2) + Math.Pow(B, 2);
+        }
+
         #endregion
 
         #region IShape
 
-        public double GetArea()
+        protected override double GetArea()
         {
-            var semiPerim = (_a + _b + _c) / 2;
-            return Math.Sqrt(semiPerim * (semiPerim - _a) * (semiPerim - _b) * (semiPerim - _c));
+            var semiPerim = (A + B + C) / 2;
+            return Math.Sqrt(semiPerim * (semiPerim - A) * (semiPerim - B) * (semiPerim - C));
+        }
+
+        public override Dictionary<string, object> GetProperties()
+        {
+            var baseProp = base.GetProperties();
+            baseProp.Add(nameof(IsRightAngled), IsRightAngled);
+            return baseProp;
         }
 
         #endregion
