@@ -25,6 +25,12 @@ Shapes:
         - GetArea - protected abstract method for calculate area
   - Circle - hm.... Circle)
   - Triangle - Triangle with RightAngled property, which is output in IShape.GetProperties
+  
+Add new shape:
+  - create shape class inherited from ShapeBase and implement GetArea method
+  - override GetProperties if need add custom property
+  - create factory class inherited from ShapeFactory and implement MakeShape method
+  - Enjoy 😉
 
 Validation:
   Validation is performed via attributes and System.ComponentModel.DataAnnotations (call in IShapeFactory.CreateShape)
